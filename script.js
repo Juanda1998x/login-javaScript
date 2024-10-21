@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded',function () {
         const isValidPassword = validatePassword();
         const isValidConfirm = validateConfirmPassword();
         if(isValidEmail && isValidPassword && isValidConfirm){
-            localStorage();
+            savelocalStorage();
             alert('ingresaste con exito');
         }
         return false;
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded',function () {
         return true;
     }
 
-    function localStorage() {
+    function savelocalStorage() {
 
         const email = campoEmail.value.trim();
         localStorage.setItem('email',email);
@@ -109,8 +109,8 @@ document.addEventListener('DOMContentLoaded',function () {
     function bodyBuilderJSON() {
 
         return{
-            'email': campoEmail.value,
-            'password': campoPasword.value
+            "email": campoEmail.value,
+            "password": campoPasword.value
         }
         
     }
